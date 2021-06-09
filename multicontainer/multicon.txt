@@ -1,0 +1,9 @@
+alias k=kubectl
+
+k apply -f two_con.yaml
+
+k get po --show-labels
+k label po app-two-containers runnung=runn
+k apply -f node-port.yaml
+
+k get svc

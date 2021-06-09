@@ -1,0 +1,24 @@
+alias k=kubectl
+
+k get deploy -o wide
+
+k get svc -o wide
+
+k scale deploy dapp --replicas 9
+
+
+
+k get po -Lapp -lapp
+
+k label po --all run=dapp
+
+k get po --show-labels
+
+
+k get svc dapp -o yaml
+
+cd ~/ops/bs
+
+k apply -f canary.yaml
+
+while true; do curl -s 34.118.52.121; sleep 1;done
